@@ -1,14 +1,16 @@
 import { createContext } from "react";
-import { PizzaState, Action } from "../Types/Types";
+import { Action, PizzaState } from "../Types/Types";
 
 export const InitialPizzaState: PizzaState = {
-  pizzas: [],
+    pizzas: [],
+    currentBottom: null,
+    currentToppings: [],
 };
 
 export const GlobalContext = createContext<{
-  state: PizzaState;
-  dispatch: React.Dispatch<Action>;
+    state: PizzaState;
+    dispatch: React.Dispatch<Action>;
 }>({
-  state: InitialPizzaState,
-  dispatch: () => null,
+    state: InitialPizzaState,
+    dispatch: () => null,
 });

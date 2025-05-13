@@ -4,10 +4,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Color variables for both radio and checkbox inputs */
+    --options-border-color: #8b8c89;
+    --options-checked-color: #274c77;
+    --options-hover-color: #a3cef1;
+    --options-disabled-bg-color: #d9d9d9;
+}
+
 body {
-    background-color: rgb(42, 41, 41); 
-    color: whitesmoke; 
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    background-color: rgb(42, 41, 41);
+    color: whitesmoke;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
 }
 
 img {

@@ -1,0 +1,92 @@
+/* Base styling for all checkbox inputs */
+input[type="checkbox"] {
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    margin: 6px;
+    padding: 0;
+    border: 2px solid var(--options-border-color);
+    border-radius: 4px;
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    transition: outline 0.1s;
+}
+
+/* Styling for checked checkboxes that are not disabled */
+input[type="checkbox"]:not(:disabled):checked {
+    border-color: var(--options-checked-color);
+    background-color: var(--options-checked-color);
+    background-clip: content-box;
+    padding: 2px;
+    /* Checkmark using background image */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M5.5 12L2 8.5l1.5-1.5L5.5 9l7-7L14 3.5z'/%3E%3C/svg%3E");
+    background-size: 75% 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling for disabled checkboxes */
+input[type="checkbox"]:disabled {
+    background-color: var(--options-disabled-bg-color);
+}
+
+/* Styling for disabled checkboxes that are checked */
+input[type="checkbox"]:disabled:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23aaaaaa' d='M5.5 12L2 8.5l1.5-1.5L5.5 9l7-7L14 3.5z'/%3E%3C/svg%3E");
+    background-color: var(--options-disabled-bg-color);
+    border-color: var(--options-border-color);
+}
+
+/* Hover styles - only applied if device supports hover */
+@media (hover: hover) {
+    input[type="checkbox"]:not(:disabled):hover {
+        background-color: var(--options-hover-color);
+        outline: 4px solid var(--options-hover-color);
+        transform: scale(1.05);
+    }
+}
+
+/* Focus styles for keyboard navigation accessibility */
+input[type="checkbox"]:focus-visible {
+    background-color: var(--options-hover-color);
+    outline: 4px solid var(--options-hover-color);
+    transform: scale(1.05);
+}
+
+/* Reduces animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    input[type="checkbox"] {
+        transition: none;
+    }
+    input[type="checkbox"]:focus-visible {
+        transform: scale(1);
+    }
+}
+
+/* Combines reduced motion and hover preferences */
+@media (prefers-reduced-motion: reduce) and (hover: hover) {
+    input[type="checkbox"]:not(:disabled):hover {
+        transform: scale(1);
+    }
+}
+
+/* Container class for checkbox and its label */
+.choose__checkbox {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.choose__topping {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.topping__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}

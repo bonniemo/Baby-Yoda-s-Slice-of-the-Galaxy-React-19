@@ -1,53 +1,36 @@
 .create-pizza {
-  height: 85vh;
-  line-height: 1.2;
-  display: flex;
-  gap: 2rem;
-  overflow: scroll;
+    height: 85vh;
+    line-height: 1.2;
+    overflow: scroll;
 
-  .create-pizza__img {
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-  }
-
-  .ingredients-card {
-    padding: 2rem 0;
-
-    h1,
-    h2 {
-      margin: 0.8rem 0;
+    .create-pizza__top-section {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
     }
 
-    h3 {
-      margin: 1rem 0 .5rem;
-      text-decoration: underline;
+    .create-pizza__img {
+        width: 200px;
+        border-radius: 20px;
     }
 
-    .choose__radio {
-      margin-bottom: 0.5rem;
-    }
+    .ingredients-card {
+        padding: 2rem 0;
 
-    .choose__topping {
-      columns: 2;
-      width: fit-content;
-    }
+        h1,
+        h2 {
+            margin: 0.8rem 0;
+            font-size: x-large;
+        }
 
-    label {
-      font-size: 1.2rem;
-      margin-right: 2rem;
-      line-height: 2;
-    }
+        h3 {
+            margin-top: 2rem;
+        }
 
-    input {
-      margin-right: 0.5rem;
-      font-size: larger;
+        button {
+            padding: 0.2rem 2rem;
+            margin-top: 0.5rem;
+            width: 60%;
+        }
     }
-
-    button {
-      padding: 0.2rem 2rem;
-      margin-top: 0.5rem;
-      width: 60%;
-    }
-  }
 }
